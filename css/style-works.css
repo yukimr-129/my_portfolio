@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+html{
+  font-size: 62%;
+}
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body {
+  text-align: left;
+  font-size: 1.4rem;
+  font-family: 'Source Sans Pro', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+a:hover {
+	color:#333;
+	text-decoration: none;
+}
+
+ul{
+	padding: 0px;
+	list-style: none;
+}
+/* header
+----------------------------------------- */
+.header{
+  padding: 70px 30px;
+}
+
+/* contents
+----------------------------------------- */
+#main {
+	max-width: 960px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.contBox {
+	margin: 0 auto;
+}
+
+#main h2.ttl {
+	margin-bottom: 70px;
+	text-align: center;
+	line-height: 1.0;
+	font-weight: 100;
+	font-size: 5rem;
+	letter-spacing: 2px;
+  color: #333;
+}
+
+#main h3.ttl {
+	margin-bottom: 12px;
+	text-align: center;
+	line-height: 1.0;
+	font-size: 22px;
+	color: #505050;
+}
+#main p.ttl {
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 1.0;
+	font-weight: 400;
+	font-size: 13px;
+	letter-spacing: 0.1em;
+	color: #a5a5a5;
+}
+
+.toTop {
+	text-align: center;
+}
+.toTop a {
+	display: block;
+	margin-bottom: 40px;
+	padding: 8px 20px;
+}
+
+/* works
+----------------------------------------- */
+#worksList {
+	margin: 0px auto 30px;
+	padding: 0;
+}
+#worksList li {
+	margin-bottom: 60px;
+}
+#worksList li.last {
+	margin-bottom: 0;
+}
+#worksList .img {
+	margin-bottom: 35px;
+	text-align: center;
+}
+#worksList .img img {
+	width: 100%;
+	height: auto;
+}
+#worksList h3.ttl {
+	margin-bottom: 15px;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: left;
+	line-height: 1.5;
+}
+
+#worksList .skill {
+	margin-bottom: 15px;
+}
+
+#worksList li {
+	margin-bottom: 160px;
+}
+
+/* ページネーション
+----------------------------------------- */
+.pagenavi {
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+	/* clear: both;
+	text-align: left; */
+  display: flex;
+  justify-content: flex-start;
+  font-size: 15px;
+}
+.pagenavi a, .pagenavi span {
+	text-decoration: none;
+	padding: 3px 7px;
+	margin: 2px;
+}
+.pagenavi a:hover {
+  text-decoration: underline;
+}
+.pagenavi span.current {
+	font-weight: bold;
+	text-decoration: underline;
+}
+/* footer
+----------------------------------------- */
+.footer {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#copyright {
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 12px;
+}
+
+/*メニュー
+----------------------------------------- */
+#nav-toggle {
+  position: fixed;
+  top: 30px;
+  right: 45px;
+  height: 32px;
+  cursor: pointer;
+}
+#nav-toggle > div {
+  position: relative;
+  width: 36px;
+}
+#nav-toggle span {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  display: block;
+  background: #383634;
+  -webkit-transition: top .5s ease, -webkit-transform .6s ease-in-out;
+  transition: top .5s ease, -webkit-transform .6s ease-in-out;
+  transition: transform .6s ease-in-out, top .5s ease;
+  transition: transform .6s ease-in-out, top .5s ease, -webkit-transform .6s ease-in-out;
+}
+#nav-toggle span:nth-child(1) {
+  top: 0;
+}
+#nav-toggle span:nth-child(2) {
+  top: 14px;
+}
+#nav-toggle span:nth-child(3) {
+  top: 28px;
+}
+#nav-toggle:hover span:nth-child(1) {
+  top: 4px;
+}
+#nav-toggle:hover span:nth-child(3) {
+  top: 23px;
+}
+
+.open #nav-toggle span {
+  background: #383634;
+}
+.open #nav-toggle span:nth-child(1) {
+  top: 15px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.open #nav-toggle span:nth-child(2) {
+  top: 15px;
+  width: 0;
+  left: 50%;
+}
+.open #nav-toggle span:nth-child(3) {
+  top: 15px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-toggle {
+  z-index: 1000;
+}
+
+#gloval-nav {
+  background: rgba(0,0,0,0.95);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 990;
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+  visibility: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 40px;
+  opacity: 0;
+  -webkit-transition: opacity .6s ease, visibility .6s ease;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+
+#gloval-nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+  -webkit-transition: color .6s ease;
+  transition: color .6s ease;
+}
+#gloval-nav a:hover {
+  color: #666;
+}
+#gloval-nav ul {
+  list-style: none;
+}
+#gloval-nav ul li {
+  opacity: 0;
+  -webkit-transform: translateX(200px);
+  transform: translateX(200px);
+  -webkit-transition: opacity .2s ease, -webkit-transform .6s ease;
+  transition: opacity .2s ease, -webkit-transform .6s ease;
+  transition: transform .6s ease, opacity .2s ease;
+  transition: transform .6s ease, opacity .2s ease, -webkit-transform .6s ease;
+}
+#gloval-nav ul li:nth-child(2) {
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+#gloval-nav ul li:nth-child(3) {
+  -webkit-transition-delay: .3s;
+  transition-delay: .3s;
+}
+#gloval-nav ul li:nth-child(4) {
+  -webkit-transition-delay: .45s;
+  transition-delay: .45s;
+}
+#gloval-nav ul li:nth-child(5) {
+  -webkit-transition-delay: .6s;
+  transition-delay: .6s;
+}
+#gloval-nav ul li:nth-child(6) {
+  -webkit-transition-delay: .75s;
+  transition-delay: .75s;
+}
+#gloval-nav ul li:nth-child(7) {
+  -webkit-transition-delay: .9s;
+  transition-delay: .9s;
+}
+
+.open {
+  overflow: hidden;
+}
+.open #gloval-nav {
+  visibility: visible;
+  opacity: 1;
+}
+.open #gloval-nav li {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: opacity .9s ease, -webkit-transform 1s ease;
+  transition: opacity .9s ease, -webkit-transform 1s ease;
+  transition: transform 1s ease, opacity .9s ease;
+  transition: transform 1s ease, opacity .9s ease, -webkit-transform 1s ease;
+}

@@ -15,7 +15,8 @@ body{
   font-size: 1.4rem;
   font-family: 'Source Sans Pro', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
-/*heading*/
+/*header
+----------------------------------------- */
 .header{
   padding: 250px 30px;
 }
@@ -44,7 +45,8 @@ body{
   font-size: 1.6rem;
 }
 
-/*about*/
+/*about
+----------------------------------------- */
 .about{
   padding: 80px 30px;
   background-color: #fff;
@@ -54,7 +56,8 @@ body{
   margin: 30px 0;
   line-height: 2.5;
 }
-/*works*/
+/*works
+----------------------------------------- */
 .works{
   background-color: #383634;
   padding: 80px 0;
@@ -151,7 +154,8 @@ body{
   margin: 10px;
 }
 
-/*skill*/
+/*skill
+----------------------------------------- */
 .skills{
   padding: 80px 0;
   background-color: #fff;
@@ -189,7 +193,8 @@ body{
   line-height: 2;
 }
 
-/*other*/
+/*other
+----------------------------------------- */
 .other{
   padding: 80px 30px;
   background-color: #383634;
@@ -229,7 +234,8 @@ body{
   }
 }
 
-/*contact*/
+/*contact
+----------------------------------------- */
 .contact{
   padding: 80px 0 150px;
 }
@@ -272,13 +278,15 @@ body{
   background-color: rgba(255, 255, 255, 0.03);
 }
 
-/*フッター*/
+/*フッター
+----------------------------------------- */
 .footer{
   padding: 15px 0;
   font-size: 1.3rem;
 }
 
-/*共通デザイン*/
+/*共通デザイン
+----------------------------------------- */
 .heading{
   display: inline-block;
   position: relative;
@@ -288,7 +296,8 @@ body{
   font-size: 4rem;
 }
 
-/*スクロールイベント*/
+/*スクロールイベント
+----------------------------------------- */
 .text-Span {
   position: relative;
   padding-bottom: 10px;
@@ -304,13 +313,14 @@ body{
   width: 0%;
   border-bottom: solid 2px #999;
   z-index: -1;
-  transition: all 0.8s;
+  transition: all 1s;
 }
 
 .text-Span.isActive::after {
   width: 100%;
 }
-/*メニュー*/
+/*メニュー
+----------------------------------------- */
 #nav-toggle {
   position: fixed;
   top: 30px;
@@ -325,10 +335,10 @@ body{
 #nav-toggle span {
   width: 100%;
   height: 2px;
+  position: absolute;
   left: 0;
   display: block;
   background: #fff;
-  position: absolute;
   -webkit-transition: top .5s ease, -webkit-transform .6s ease-in-out;
   transition: top .5s ease, -webkit-transform .6s ease-in-out;
   transition: transform .6s ease-in-out, top .5s ease;
@@ -356,7 +366,7 @@ body{
 .open #nav-toggle span:nth-child(1) {
   top: 15px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .open #nav-toggle span:nth-child(2) {
   top: 15px;
@@ -366,7 +376,7 @@ body{
 .open #nav-toggle span:nth-child(3) {
   top: 15px;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 #nav-toggle {
@@ -374,7 +384,7 @@ body{
 }
 
 #gloval-nav {
-  background: rgba(99, 99, 99,.95);
+  background: rgba(0,0,0,0.95);
   color: #fff;
   position: fixed;
   top: 0;
@@ -393,7 +403,7 @@ body{
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  font-size: 29px;
+  font-size: 40px;
   opacity: 0;
   -webkit-transition: opacity .6s ease, visibility .6s ease;
   transition: opacity .6s ease, visibility .6s ease;
@@ -436,7 +446,7 @@ body{
 }
 #gloval-nav ul li:nth-child(5) {
   -webkit-transition-delay: .6s;
-          transition-delay: .6s;
+  transition-delay: .6s;
 }
 #gloval-nav ul li:nth-child(6) {
   -webkit-transition-delay: .75s;
@@ -464,7 +474,114 @@ body{
   transition: transform 1s ease, opacity .9s ease, -webkit-transform 1s ease;
 }
 
-/*メディアクエリ*/
+/* オープニングシャッター
+----------------------------------------- */
+.shutter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1e1e1e;
+  z-index: 9999;
+  -webkit-animation: byeShutter 2.6s forwards;
+  animation: byeShutter 2.6s forwards;
+}
+.shutter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #f3f3f3;
+  width: 0;
+  height: 1px;
+  -webkit-animation: shutterOpen 2.6s forwards;
+  animation: shutterOpen 2.6s forwards;
+}
+
+@-webkit-keyframes byeShutter {
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+
+@keyframes byeShutter {
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+@-webkit-keyframes shutterOpen {
+  0% {
+    width: 0;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  90% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes shutterOpen {
+  0% {
+    width: 0;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  90% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+@-webkit-keyframes contentScale {
+  70% {
+    -webkit-transform: perspective(800px) scale(0.9) rotateX(15deg);
+    transform: perspective(800px) scale(0.9) rotateX(15deg);
+  }
+  100% {
+    -webkit-transform: perspective(800px) scale(1) rotateX(0);
+    transform: perspective(800px) scale(1) rotateX(0);
+  }
+}
+@keyframes contentScale {
+  70% {
+    -webkit-transform: perspective(800px) scale(0.9) rotateX(15deg);
+    transform: perspective(800px) scale(0.9) rotateX(15deg);
+  }
+  100% {
+    -webkit-transform: perspective(800px) scale(1) rotateX(0);
+    transform: perspective(800px) scale(1) rotateX(0);
+  }
+}
+
+
+/*メディアクエリ
+----------------------------------------- */
 @media (max-width: 768px){
   .heading{
     font-size: 2.5rem;
