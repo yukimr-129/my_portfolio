@@ -591,6 +591,14 @@ body{
     font-size: 1.3rem;
   }
 
+  #nav-toggle {
+    right: 25px;
+  }
+
+  .open #gloval-nav li {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
   .site-title-sub::before,
   .site-title-sub::after{
     display: block;
@@ -607,7 +615,7 @@ body{
   }
 
   .header{
-    padding-top: 120px;
+    padding-top: 170px;
   }
 
   .about-text{
