@@ -85,10 +85,10 @@ body{
   background-image: url('../images/music_t.png');
 }
 .works-box.building::after{
-  background-image: url('../images/dummy.jpg');
+  background-image: url('../images/ToDo-App_image.png');
 }
 .works-box.lake::after{
-  background-image: url('../images/dummy.jpg');
+  background-image: url('../images/CafeWalk.png');
 }
 .works-box.sky::after{
   background-image: url('../images/dummy.jpg');
